@@ -2,10 +2,9 @@
 
 
 gcloud compute firewall-rules delete open-access
+ 
 
-
-
-gcloud compute instances start bastion
+gcloud compute firewall-rules describe open-access 
 
 
 gcloud compute firewall-rules create ssh-ingress --allow=tcp:22 --source-ranges 35.235.240.0/20 --target-tags ssh-ingress --network acme-vpc
